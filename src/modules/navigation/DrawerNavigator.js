@@ -15,24 +15,9 @@ import { useFocusEffect } from "@react-navigation/native";
 import {Colors, Images, Fonts} from '../../contants';
 import {Display, Init} from '../../utils';
 
-/*// Main
-import Main from '../main';
-// About
-import {About} from '../about';
-// Contact
-import {Contact} from '../contact';
-// Product
-import {Product, Category as ProductCategory, Detail as ProductDetail} from '../product';
-// Cart
-import {Cart, CartFinish, CartProcess} from '../cart';
-// News
-import {News} from '../news';
-// Member
-import {Member, Registry, Login, Logout, YourOrder, ChangePass} from '../member';*/
-
 // Router - Component
 import {Routes, Screen} from './route';
-import {CustomText, CustomIconDrawer, PageNotFound} from './components';
+import {CustomText, CustomIconDrawer} from './components';
 
 const Drawer = createDrawerNavigator();
 
@@ -138,74 +123,6 @@ const CustomComponentDrawer = ({screen, props}) => {
 
 	// Screen
 	return <Screen screen={screen} props={props} />;
-
-	// ROUTER
-	// switch (screen) {
-	// 	/*MAIN*/
-  //   case "Main": {
-  //     return <Main {...props} />;
-  //   }
-
-  //   /*ABOUT*/
-  //   case "About": {
-  //     return <About {...props} />;
-  //   }
-
-  //   /*PRODUCT*/
-  //   case "Product": {
-  //     return <Product {...props} />;
-  //   }
-  //   case "ProductCategory": {
-  //     return <ProductCategory {...props} />;
-  //   }
-  // 	case "ProductDetail": {
-  //     return <ProductDetail {...props} />;
-  //   }
-
-  //   /*NEWS*/
-  //   case "News": {
-  //     return <News {...props} />;
-  //   }
-
-  //   /*CONTACT*/
-  //   case "Contact": {
-  //     return <Contact {...props} />;
-  //   }
-
-  //   /*CART*/
-  //   case "Cart": {
-  //     return <Cart {...props} />;
-  //   }
-  //   case "CartProcess": {
-  //     return <CartProcess {...props} />;
-  //   }
-  //   case "CartFinish": {
-  //     return <CartFinish {...props} />;
-  //   }
-
-  //   /*MEMBER*/
-  //   case "Member": {
-  //     return <Member {...props} />;
-  //   }
-  //   case "Registry": {
-  //     return <Registry {...props} />;
-  //   }
-  //   case "Login": {
-  //     return <Login {...props} />;
-  //   }
-  //   case "Logout": {
-  //     return <Logout {...props} />;
-  //   }
-  //   case "YourOrder": {
-  //     return <YourOrder {...props} />;
-  //   }
-  //   case "ChangePass": {
-  //     return <ChangePass {...props} />;
-  //   }
-    
-  //   default:
-  //     return <PageNotFound {...props} />;
-  // }
 }
 
 const DrawerNavigator = () => {
