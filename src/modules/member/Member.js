@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useState, useRef} from 'react';
 import {SafeAreaView, TouchableOpacity, View, Text, TextInput, StyleSheet, Image} from 'react-native';
 import { useFocusEffect } from "@react-navigation/native";
 

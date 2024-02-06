@@ -117,7 +117,6 @@ const CustomDrawerContent = props => {
  * @return {[type]}                [description]
  */
 const CustomComponentDrawer = ({screen, props}) => {
-	
 	// Load
 	Init.loadGlobal();
 

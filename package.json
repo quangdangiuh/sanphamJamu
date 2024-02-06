@@ -20,6 +20,7 @@
     "@redux-devtools/extension": "^3.2.5",
     "carousel-with-pagination-rn": "^1.1.8",
     "intl": "^1.2.5",
+    "lodash": "^4.17.21",
     "lottie-react-native": "^6.2.0",
     "react": "18.2.0",
     "react-facebook": "^9.0.12",

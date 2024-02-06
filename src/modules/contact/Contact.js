@@ -1,40 +1,54 @@
-import React from 'react';
-import {SafeAreaView, View, Text, StyleSheet, StatusBar, Image} from 'react-native';
+import React, {useRef, useState} from 'react';
+import {SafeAreaView, View, Text, StyleSheet} from 'react-native';
+
+import { ScrollView } from 'react-native-gesture-handler';
+
+import {Header, Footer, ContactSidebar, Lib_style} from '../../global';
 
 import {Colors, Images, Fonts} from '../../contants';
 import {Display} from '../../utils';
 
+import {BannerTop} from './components';
+
 const Contact = ({navigation}) => {
-  console.log("Contact");
-  
+  const scrollRef = useRef(null);
+
   return (
-      <View style={styles.container}>
-        <Text style={styles.titleText}>Contact</Text>
-      </View>
+    <SafeAreaView style={{flex: 1, color: Colors.COLOR_WHITE}}>
+      <Header navigation={navigation} />
+
+      <ScrollView 
+        ref={scrollRef}
+        keyboardDismissMode={'on-drag'}
+        keyboardShouldPersistTaps={'handled'}
+      >
+        {/*Banner Top*/}
+        <BannerTop />
+
+        <View style={styles.vwInfoContainer}>
+          <View style={styles.vwInfoContent}>
+            <Text>Contact</Text>
+          </View>
+        </View>
+
+        {/*Footer*/}
+        <Footer navigation={navigation} />
+      </ScrollView>
+
+      {/*Sidebar*/}
+      <ContactSidebar scrollRef={scrollRef} />
+
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: Colors.DEFAULT_GREEN,
+  vwInfoContainer: {
+    paddingHorizontal: 10,
+    marginVertical: 20,
   },
-  header: {
-    padding: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  image: {
-    height: Display.setHeight(30),
-    width: Display.setWidth(60),
-  },
-  titleText: {
-    color: Colors.DEFAULT_WHITE,
-    fontSize: 32,
-    fontFamily: Fonts.POPPINS_LIGHT,
+  vwInfoContent: {
+    // backgroundColor: Colors.DEFAULT_GREEN
   },
 });
 

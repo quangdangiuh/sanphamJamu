@@ -26,12 +26,6 @@ const RootNavigator = () => {
 	    	{(isLoadApp || !isLoadApp) && isSplash && <Splash />}
 	    	{isFirstOpen && !isSplash && isLoadApp && <DrawerNavigator />}
 	    	{!isFirstOpen && !isSplash && isLoadApp && <Welcome />}
-
-		    {/*<Stack.Navigator screenOptions={{headerShown: false}}>
-			    <Stack.Screen name="Splash" component={Splash} />
-			    <Stack.Screen name="Welcome" component={Welcome} />
-			    <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} />
-		    </Stack.Navigator>*/}
 	    </NavigationContainer>
 	  );
 };
